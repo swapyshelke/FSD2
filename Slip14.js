@@ -1,0 +1,49 @@
+import { useState } from "react";
+
+export default function Slip14() {
+  const [val, setVal] = useState("");
+
+  const handleClick = b => b === "C" ? setVal("") : setVal(val + b);
+  const calculate = () => setVal(eval(val).toString());
+
+  return (
+    <div>
+        <center>
+      <h1>Calculator</h1>
+      <input value={val}/><br/>
+
+  
+  <div>
+    <button onClick={() => handleClick("7")}>7</button>
+    <button onClick={() => handleClick("8")}>8</button>
+    <button onClick={() => handleClick("9")}>9</button>
+    <button onClick={() => handleClick("/")}>/</button>
+  </div>
+
+  <div>
+    <button onClick={() => handleClick("4")}>4</button>
+    <button onClick={() => handleClick("5")}>5</button>
+    <button onClick={() => handleClick("6")}>6</button>
+    <button onClick={() => handleClick("*")}>*</button>
+  </div>
+
+  <div>
+    <button onClick={() => handleClick("1")}>1</button>
+    <button onClick={() => handleClick("2")}>2</button>
+    <button onClick={() => handleClick("3")}>3</button>
+    <button onClick={() => handleClick("-")}>-</button>
+  </div>
+
+  <div>
+    <button onClick={() => handleClick("0")}>0</button>
+    <button onClick={() => handleClick(".")}>.</button>
+    <button onClick={() => handleClick("C")}>C</button>
+    <button onClick={() => handleClick("+")}>+</button>
+  </div>
+ <br/>
+      <button onClick={calculate}>=</button>
+      </center>
+    </div>
+  );
+}
+
