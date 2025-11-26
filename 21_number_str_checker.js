@@ -1,3 +1,11 @@
+// take input from user (number, string)
+// check number is even or odd
+// string is plaindrome is or not
+// diaplay appropriate message to user
+
+
+
+
 import React, { useState } from "react";
 
 function Ass21() {
